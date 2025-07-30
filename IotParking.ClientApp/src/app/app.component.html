@@ -1,0 +1,84 @@
+<div class="parking-app">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="title">
+        <span class="icon">🅿️</span>
+        Parking Finder
+      </h1>
+      <p class="subtitle">Pronađi slobodno parking mesto</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Controls -->
+      <div class="controls">
+        <button class="refresh-btn" (click)="refreshParkingSpots()" [disabled]="isLoading">
+          <span class="btn-icon" [class.spinning]="isLoading">🔄</span>
+          {{ isLoading ? "Učitavam..." : "Pronađi slobodna mesta" }}
+        </button>
+
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">{{ totalSpots }}</span>
+            <span class="stat-label">Ukupno</span>
+          </div>
+          <div class="stat-item available">
+            <span class="stat-number" style="color: white">{{
+              this.parkingSpots.length
+              }}</span>
+            <span class="stat-label" style="color: white">Slobodno</span>
+          </div>
+          <div class="stat-item occupied">
+            <span class="stat-number" style="color: white">{{
+              totalSpots - this.parkingSpots.length
+              }}</span>
+            <span class="stat-label" style="color: white">Zauzeto</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parking Spots List -->
+      <div class="spots-grid">
+        <div *ngFor="let spot of parkingSpots; trackBy: trackByName" class="spot-card" [class.available]="spot.slobodan"
+          [class.occupied]="!spot.slobodan">
+          <div class="spot-header">
+            <h3 class="spot-name">{{ spot.naziv }}</h3>
+            <div class="spot-status">
+              <span class="status-indicator" [class.available]="spot.slobodan" [class.occupied]="!spot.slobodan"></span>
+              <span class="status-text">{{
+                spot.slobodan ? "Slobodno" : "Zauzeto"
+                }}</span>
+            </div>
+          </div>
+
+          <div class="spot-details">
+            <div class="coordinate">
+              <span class="coordinate-label">📍 Lokacija:</span>
+              <span class="coordinate-value">{{ spot.latitude.toFixed(6) }},
+                {{ spot.longitude.toFixed(6) }}</span>
+            </div>
+          </div>
+
+          <div class="spot-actions">
+            <button class="action-btn map-btn" [disabled]="!spot.slobodan" (click)="openInGoogleMaps(spot)">
+              🗺️ Vidi na mapi
+            </button>
+            <button class="action-btn navigate-btn" [disabled]="!spot.slobodan" (click)="navigateToSpot(spot)">
+              🧭 Navigiraj
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div *ngIf="parkingSpots.length === 0" class="empty-state">
+        <div class="empty-icon">🚗</div>
+        <h3>Nema podataka o parking mestima</h3>
+        <p>Kliknite na "Pronađi slobodna mesta" da učitate podatke</p>
+      </div>
+    </div>
+  </main>
+</div>
