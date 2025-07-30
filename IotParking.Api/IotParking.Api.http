@@ -1,0 +1,6 @@
+@IotParking.Api_HostAddress = http://localhost:5216
+
+GET {{IotParking.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
