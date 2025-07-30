@@ -7,19 +7,19 @@
 Thumbs.db
 
 # Node (Angular ClientApp)
-ClientApp/node_modules/
-ClientApp/dist/
-ClientApp/.angular/
-ClientApp/.env
-ClientApp/.env.local
-ClientApp/.env.*.local
+IotParking.ClientApp/node_modules/
+IotParking.ClientApp/dist/
+IotParking.ClientApp/.angular/
+IotParking.ClientApp/.env
+IotParking.ClientApp/.env.local
+IotParking.ClientApp/.env.*.local
 
 # Angular IDEs / tools
-ClientApp/.idea/
-ClientApp/.vscode/
-ClientApp/.eslintcache
+IotParking.ClientApp/.idea/
+IotParking.ClientApp/.vscode/
+IotParking.ClientApp/.eslintcache
 
-# ASP.NET (IotParking.Api)
+# ASP.NET Core (IotParking.Api)
 IotParking.Api/bin/
 IotParking.Api/obj/
 IotParking.Api/.vs/
@@ -31,19 +31,19 @@ IotParking.Api/appsettings.*.json.user
 IotParking.Bridge/bin/
 IotParking.Bridge/obj/
 
-# Ignore user-specific IDE/project files
+# Ignore user-specific IDE/project files anywhere
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# VS Code settings (optional)
+# VS Code settings (global)
 .vscode/
 
 # Global npm cache (optional)
 .npm/
 
 # Yarn (if used)
-ClientApp/yarn.lock
-ClientApp/.yarn/
-ClientApp/.pnp.*
+IotParking.ClientApp/yarn.lock
+IotParking.ClientApp/.yarn/
+IotParking.ClientApp/.pnp.*
