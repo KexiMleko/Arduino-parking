@@ -1,0 +1,48 @@
+IoTParking License Agreement (Strict Non-Commercial)
+
+Project: IoTParking: Smart Parking Spot Detection System
+Copyright © 2025 36/2021. All Rights Reserved.
+
+Permissions
+
+You are allowed to:
+
+Use this software for personal, academic, or research purposes only.
+
+Modify the source code for non-commercial purposes only.
+
+Share the software and modifications, but only under the same license terms.
+
+Restrictions
+
+You are NOT allowed to:
+
+Use the software, in whole or in part, for commercial purposes.
+
+This includes selling, sublicensing, providing paid services, or using it in a commercial product.
+
+Remove or alter copyright notices, license headers, or author attributions.
+
+Re-license the software under different terms.
+
+Use the software for illegal, malicious, or unethical purposes.
+
+Warranty Disclaimer
+
+This software is provided “as is”, without any warranty of any kind,
+express or implied, including but not limited to warranties of merchantability,
+fitness for a particular purpose, or non-infringement.
+
+The authors shall not be liable for any claim, damages, or other liability
+arising from the use of this software.
+
+Enforcement
+
+Any violation of this license automatically terminates your rights to use,
+copy, modify, or distribute this software.
+
+Summary
+
+You may use, study, and share IoTParking only for non-commercial purposes.
+Commercial exploitation in any form is strictly prohibited without
+explicit prior written permission from the copyright holder.
